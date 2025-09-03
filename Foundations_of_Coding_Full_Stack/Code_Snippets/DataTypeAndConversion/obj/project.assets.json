@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Local_Disk_D\\ASP.NET Core Projects\\Microsoft_Full_Stack_Developer\\Code_Snippets\\DataTypeAndConversion\\DataTypeAndConversion.csproj",
+      "projectUniqueName": "C:\\Local_Disk_D\\ASP.NET Core Projects\\Microsoft_Full_Stack_Developer\\Foundations_of_Coding_Full_Stack\\Code_Snippets\\DataTypeAndConversion\\DataTypeAndConversion.csproj",
       "projectName": "DataTypeAndConversion",
-      "projectPath": "C:\\Local_Disk_D\\ASP.NET Core Projects\\Microsoft_Full_Stack_Developer\\Code_Snippets\\DataTypeAndConversion\\DataTypeAndConversion.csproj",
+      "projectPath": "C:\\Local_Disk_D\\ASP.NET Core Projects\\Microsoft_Full_Stack_Developer\\Foundations_of_Coding_Full_Stack\\Code_Snippets\\DataTypeAndConversion\\DataTypeAndConversion.csproj",
       "packagesPath": "C:\\Users\\veersen.jadhav\\.nuget\\packages\\",
-      "outputPath": "C:\\Local_Disk_D\\ASP.NET Core Projects\\Microsoft_Full_Stack_Developer\\Code_Snippets\\DataTypeAndConversion\\obj\\",
+      "outputPath": "C:\\Local_Disk_D\\ASP.NET Core Projects\\Microsoft_Full_Stack_Developer\\Foundations_of_Coding_Full_Stack\\Code_Snippets\\DataTypeAndConversion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

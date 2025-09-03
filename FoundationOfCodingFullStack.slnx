@@ -1,4 +1,5 @@
-<Solution> C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Foundations_of_Coding_Full_Stack\Code_Snippets
+<Solution>
+  <Folder Name="/Foundations_of_Coding_Full_Stack/" />
   <Folder Name="/Foundations_of_Coding_Full_Stack/Code_Snippets/">
     <Project Path="Foundations_of_Coding_Full_Stack/Code_Snippets/DataTypeAndConversion/DataTypeAndConversion.csproj" />
   </Folder>
