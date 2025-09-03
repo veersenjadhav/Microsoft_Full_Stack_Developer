@@ -1,0 +1,15 @@
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\bin\Debug\net9.0\DataTypeAndConversion.exe
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\bin\Debug\net9.0\DataTypeAndConversion.deps.json
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\bin\Debug\net9.0\DataTypeAndConversion.runtimeconfig.json
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\bin\Debug\net9.0\DataTypeAndConversion.dll
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\bin\Debug\net9.0\DataTypeAndConversion.pdb
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\DataTypeAndConversion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\DataTypeAndConversion.AssemblyInfoInputs.cache
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\DataTypeAndConversion.AssemblyInfo.cs
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\DataTypeAndConversion.csproj.CoreCompileInputs.cache
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\DataTypeAndConversion.sourcelink.json
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\DataTypeAndConversion.dll
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\refint\DataTypeAndConversion.dll
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\DataTypeAndConversion.pdb
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\DataTypeAndConversion.genruntimeconfig.cache
+C:\Local_Disk_D\ASP.NET Core Projects\Microsoft_Full_Stack_Developer\Code_Snippets\DataTypeAndConversion\obj\Debug\net9.0\ref\DataTypeAndConversion.dll
