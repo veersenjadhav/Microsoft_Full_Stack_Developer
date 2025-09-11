@@ -1,0 +1,47 @@
+Functional Requirements -
+
+Add new students by entering Name and unique Student ID.
+
+Store student information (ID, Name, and list of grades).
+
+Assign grades for multiple subjects for each student.
+
+Allow updating or adding more grades to an existing student.
+
+Calculate and display the average grade of a student.
+
+Display full student records, including ID, Name, subjects with grades, and average.
+
+Basic menu-driven console interaction (for adding students, adding grades, viewing records, etc.).
+
+________________________________________________
+
+Non-Functional Requirements -
+
+The application will be a C# console-based program.
+
+Data will be temporary and stored in memory (no database needed for this project).
+
+Input should be validated (e.g., prevent duplicate IDs, handle invalid grade input).
+
+The program should be simple, user-friendly, and easy to navigate using console menus.
+
+The code should be modular, using functions or methods for major operations (like AddStudent, CalculateAverage, DisplayRecords).
+
+Application should handle errors gracefully without crashing (for example, if user enters a wrong ID).
+
+________________________________________________
+
+Project Objectives -
+
+Build a working C# console application that can manage students and their grades.
+
+Provide functionality for users to add students, assign grades, and view results.
+
+Show an accurate calculation of each student’s average grade.
+
+Demonstrate understanding of C# fundamentals such as data structures (lists/dictionaries), classes, methods, and console input/output.
+
+Deliver a clean, menu-based interface that makes it easy to use the system.
+
+________________________________________________
