@@ -2,5 +2,6 @@
   <Folder Name="/Foundations_of_Coding_Full_Stack/" />
   <Folder Name="/Foundations_of_Coding_Full_Stack/Code_Snippets/">
     <Project Path="Foundations_of_Coding_Full_Stack/Code_Snippets/DataTypeAndConversion/DataTypeAndConversion.csproj" />
+    <Project Path="Foundations_of_Coding_Full_Stack/Code_Snippets/StudentGradeManagementSystem/StudentGradeManagementSystem.csproj" />
   </Folder>
 </Solution>
