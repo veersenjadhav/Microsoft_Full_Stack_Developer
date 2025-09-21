@@ -27,7 +27,7 @@ class Student
     /// <param name="adblGrade"></param>
     public void InsertSubjectWiseGrade(string? astrSubjectName, double adblGrade)
     {
-        if (ColGradeReport.Any(x => x.SubjectName == astrSubjectName))
+        if (ColGradeReport.Any(x => x.SubjectName?.ToLower() == astrSubjectName?.ToLower()))
         {
             Report objReport = ColGradeReport.Where(x => x.SubjectName?.ToLower() == astrSubjectName?.ToLower()).First();
             objReport.SetSubjectAndGrade(astrSubjectName, adblGrade);
@@ -181,7 +181,7 @@ class StudentGradeManagement
     public static void AddStudent(ref Collection<Student> aColStudent)
     {
         Console.WriteLine("Enter Student ID: ");
-        if (int.TryParse(Console.ReadLine(), out int StudentId))
+        if (int.TryParse(Console.ReadLine(), out int StudentId) && StudentId > 0)
         {
             if (aColStudent.Any(x => x.StudentId == StudentId))
             {
