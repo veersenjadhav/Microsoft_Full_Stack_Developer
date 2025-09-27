@@ -4,16 +4,30 @@ public class Program
 {
     public async Task DownloadFile()
     {
-        Console.WriteLine("File download started...");
-        await Task.Delay(5000);
-        Console.WriteLine("File download completed...");
+        try
+        {
+            Console.WriteLine("File download started...");
+            await Task.Delay(5000);
+            Console.WriteLine("File download completed...");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error occured: {ex}");
+        }
     }
 
     public async Task DownloadFile2()
     {
-        Console.WriteLine("File2 download started...");
-        await Task.Delay(15000);
-        Console.WriteLine("File2 download completed...");
+        try
+        {
+            Console.WriteLine("File 2 download started...");
+            await Task.Delay(15000);
+            Console.WriteLine("File 2 download completed...");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error occured: {ex}");
+        }
     }
 
     public void TickCounter()
@@ -21,7 +35,7 @@ public class Program
         for (int i = 1; i <= 10; i++)
         {
             Console.WriteLine($"Tick Tick {i}");
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
         }
     }
 
