@@ -4,4 +4,8 @@
     <Project Path="Foundations_of_Coding_Full_Stack/Code_Snippets/DataTypeAndConversion/DataTypeAndConversion.csproj" />
     <Project Path="Foundations_of_Coding_Full_Stack/Code_Snippets/StudentGradeManagementSystem/StudentGradeManagementSystem.csproj" />
   </Folder>
+  <Folder Name="/Introduction_to_Programming_with CSharp/" />
+  <Folder Name="/Introduction_to_Programming_with CSharp/Code_Snippets/">
+    <Project Path="Introduction_to_Programming_with CSharp/Code_Snippets/AsynchronousProgrammingDemo/AsynchronousProgrammingDemo.csproj" />
+  </Folder>
 </Solution>
