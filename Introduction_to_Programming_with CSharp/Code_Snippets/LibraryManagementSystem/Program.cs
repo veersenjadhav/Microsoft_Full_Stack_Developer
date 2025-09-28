@@ -147,7 +147,7 @@ namespace LibraryManagementSystem
         }
 
         // Read a non-empty title from the user; returns null when invalid
-        private static string ReadTitle(string prompt)
+        private static string? ReadTitle(string prompt)
         {
             Console.Write(prompt);
             var title = (Console.ReadLine() ?? "").Trim();
