@@ -7,5 +7,6 @@
   <Folder Name="/Introduction_to_Programming_with CSharp/" />
   <Folder Name="/Introduction_to_Programming_with CSharp/Code_Snippets/">
     <Project Path="Introduction_to_Programming_with CSharp/Code_Snippets/AsynchronousProgrammingDemo/AsynchronousProgrammingDemo.csproj" />
+    <Project Path="Introduction_to_Programming_with CSharp/Code_Snippets/LibraryManagementSystem/LibraryManagementSystem.csproj" />
   </Folder>
 </Solution>
