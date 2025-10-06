@@ -1,6 +1,6 @@
 namespace BankingConsoleApp
 {
-    public class Account
+    public abstract class Account
     {
         public long AccountNumber { get; set; }
 
@@ -10,14 +10,8 @@ namespace BankingConsoleApp
 
         public DateTime CreatedAt { get; set; }
 
-        public virtual void Deposit(decimal adecAmount)
-        {
+        public abstract void Deposit(decimal adecAmount);
 
-        }
-
-        public virtual void Withdraw(decimal adecAmount)
-        {
-            
-        }
+        public abstract void Withdraw(decimal adecAmount);
     }
 }
