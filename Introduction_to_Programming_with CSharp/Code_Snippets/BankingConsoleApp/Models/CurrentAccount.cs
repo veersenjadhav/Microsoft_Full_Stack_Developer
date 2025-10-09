@@ -1,4 +1,4 @@
-namespace BankingConsoleApp
+namespace BankingConsoleApp.Models
 {
     public class CurrentAccount : Account
     {
