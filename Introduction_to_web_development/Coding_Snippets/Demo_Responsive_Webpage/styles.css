@@ -1,0 +1,80 @@
+/* Reset margins and paddings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic Styling */
+body {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header and Footer Styling */
+header,
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: #a6a6a6;
+    padding: 10px;
+}
+
+/* Main Content Layout */
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+aside {
+    width: 30rem;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* CSS Animations */
+nav ul li a:hover {
+    color: red;
+    transition: color 0.3s ease;
+}
+
+header {
+    animation: slide 2s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(20px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
