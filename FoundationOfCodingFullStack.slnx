@@ -13,6 +13,7 @@
   <Folder Name="/Blazor_for_Front_End_Development/" />
   <Folder Name="/Blazor_for_Front_End_Development/Coding_Snippets/">
     <Project Path="Blazor_for_Front_End_Development/Coding_Snippets/GroovEcoBlazor/GroovEcoBlazor.csproj" />
+    <Project Path="Blazor_for_Front_End_Development/Coding_Snippets/ProductCatalog/ProductCatalog.csproj" />
     <Project Path="Blazor_for_Front_End_Development/Coding_Snippets/TaskManagerApp/TaskManagerApp.csproj" />
   </Folder>
 </Solution>
