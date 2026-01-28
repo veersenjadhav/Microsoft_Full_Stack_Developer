@@ -1,0 +1,48 @@
+@page "/ReusableCard"
+@inject DataService lobjDataService
+
+<div>
+    <button @onclick="ToggleRenderCondition">Toggle Product List</button>
+
+    @if (ShouldRenderCondition)
+    {
+        <ul>
+            @foreach (var lobjProduct in llstProducts)
+            {
+                <li>@lobjProduct</li>
+            }
+        </ul>
+    }
+</div>
+
+<div style="border:1px solid black; color:@ThemeColor;">
+    <p>Reusable Componenet Content</p>
+</div>
+
+
+@code
+{
+    [CascadingParameter]
+    public string ThemeColor { get; set; }
+    private List<string> llstProducts = new();
+    private bool ShouldRenderCondition = true;
+
+    /// <summary>
+    /// Load data asynchronously
+    /// </summary>
+    /// <returns></returns>
+    protected override async Task OnInitializedAsync()
+    {
+        llstProducts = await lobjDataService.GetProductsAsync();
+    }
+
+    protected override bool ShouldRender()
+    {
+        return ShouldRenderCondition;
+    }
+
+    private void ToggleRenderCondition()
+    {
+        ShouldRenderCondition = !ShouldRenderCondition;
+    }
+}
