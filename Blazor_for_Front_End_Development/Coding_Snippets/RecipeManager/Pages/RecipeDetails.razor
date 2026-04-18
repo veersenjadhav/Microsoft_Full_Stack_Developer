@@ -1,0 +1,24 @@
+@page "/recipe/{id:int}"
+
+@code 
+{
+    [Parameter]
+    public int Id { get; set; }
+
+    private Recipe? recipe;
+
+    protected override void OnParametersSet()
+    {
+        // Fetch the recipe (simulate fetching with a hardcoded list)
+        var recipes = new List<Recipe>
+        {
+            new Recipe { Id = 1, Name = "Spaghetti Bolognese", Description = "A classic Italian pasta dish." },
+            new Recipe { Id = 2, Name = "Chicken Curry", Description = "A flavorful Indian curry." }
+        };
+
+        recipe = recipes.FirstOrDefault(r => r.Id == Id);
+    }
+}
+
+<h3>@recipe?.Name</h3>
+<p>@recipe?.Description</p>
