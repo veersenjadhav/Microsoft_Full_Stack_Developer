@@ -1,29 +1,33 @@
 @page "/events"
+@rendermode InteractiveServer
 @using EventEaseApp.Models
 @using EventEaseApp.Components
 
 <PageTitle>Event List</PageTitle>
 
-<h2 class="mb-4">Upcoming Events</h2>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Upcoming Events</h2>
+    <a href="/events/register" class="btn btn-primary">Create New Event</a>
+</div>
 
 <div class="row">
-    @foreach (var evt in events)
+    @if (EventModel.Events != null && EventModel.Events.Count > 0)
     {
-        <div class="col-md-6 mb-4">
-            <EventCard EventDetails="evt" />
-            <div class="d-flex gap-2 mt-2">
-                <a href="/events/@evt.Id" class="btn btn-outline-primary w-100">View Details</a>
-                <a href="/events/register/@evt.Id" class="btn btn-success w-100">Register</a>
+        @foreach (var evt in EventModel.Events)
+        {
+            <div class="col-md-6 mb-4">
+                <EventCard EventDetails="evt" />
+                <div class="d-flex gap-2 mt-2">
+                    <a href="/events/@evt.Id" class="btn btn-outline-primary w-100">View Details</a>
+                </div>
             </div>
-        </div>
+        }
+    }
+    else
+    {
+        <p>No events found.</p>
     }
 </div>
 
 @code {
-    private List<EventModel> events = new List<EventModel>
-    {
-        new EventModel { Id = 1, Name = "Annual Tech Conference", Date = DateTime.Today.AddDays(30), Location = "Convention Center" },
-        new EventModel { Id = 2, Name = "Music Festival", Date = DateTime.Today.AddDays(45), Location = "City Park" },
-        new EventModel { Id = 3, Name = "Art Expo", Date = DateTime.Today.AddDays(60), Location = "Downtown Gallery" }
-    };
 }
