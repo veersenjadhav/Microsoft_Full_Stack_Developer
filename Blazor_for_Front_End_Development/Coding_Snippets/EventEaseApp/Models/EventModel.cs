@@ -15,6 +15,9 @@ namespace EventEaseApp.Models
         [Required(ErrorMessage = "Location is required.")]
         public string Location { get; set; }
 
+        // Collection to store registered users
+        public List<UserModel> UserDetail { get; set; } = new List<UserModel>();
+
         // Mock database for sharing state across pages
         public static List<EventModel> Events { get; set; } = new List<EventModel>
         {

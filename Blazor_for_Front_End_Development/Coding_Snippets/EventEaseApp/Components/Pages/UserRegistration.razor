@@ -1,0 +1,61 @@
+@page "/event/register/{Id:int}"
+@rendermode InteractiveServer
+@using EventEaseApp.Models
+@using EventEaseApp.Components
+@inject NavigationManager NavigationManager
+
+<PageTitle>User Registration</PageTitle>
+
+<h2 class="mb-4">Register for Event</h2>
+
+@if (targetEvent != null)
+{
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h5 class="text-muted">Event Details:</h5>
+            <EventCard EventDetails="targetEvent" IsEditable="false" />
+        </div>
+
+        <div class="col-md-6">
+            <div class="card p-4 shadow-sm">
+                <h5 class="mb-3">Attendee Information</h5>
+                <EditForm Model="user" OnValidSubmit="HandleRegistration">
+                    <DataAnnotationsValidator />
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <InputText class="form-control" @bind-Value="user.Name" placeholder="Enter your name" />
+                        <ValidationMessage For="@(() => user.Name)" class="text-danger small" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <InputText class="form-control" @bind-Value="user.Email" placeholder="Enter your email" />
+                        <ValidationMessage For="@(() => user.Email)" class="text-danger small" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mb-2">Save Registration</button>
+                    <a href="/events" class="btn btn-outline-secondary w-100">Cancel</a>
+                </EditForm>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <p class="text-danger">Event not found.</p>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private EventModel targetEvent;
+    private UserModel user = new UserModel();
+
+    protected override void OnInitialized() => targetEvent = EventModel.Events.FirstOrDefault(e => e.Id == Id);
+
+    private void HandleRegistration()
+    {
+        targetEvent?.UserDetail.Add(user);
+        NavigationManager.NavigateTo("/events");
+    }
+}
