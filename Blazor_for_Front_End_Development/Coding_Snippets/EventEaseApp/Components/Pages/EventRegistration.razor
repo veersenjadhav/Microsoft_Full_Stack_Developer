@@ -10,11 +10,15 @@
 
 <div class="row">
     <div class="col-md-6 mb-4">
-        <!-- Reusing Event Card for Two-Way Data Binding input -->
-        <EventCard EventDetails="newEvent" />
-        
-        <button class="btn btn-success w-100 mt-3" @onclick="CreateEvent">Register Event</button>
-        <a href="/events" class="btn btn-outline-secondary w-100 mt-2">Cancel</a>
+        <EditForm Model="newEvent" OnValidSubmit="CreateEvent">
+            <DataAnnotationsValidator />
+
+            <!-- Reusing Event Card for Two-Way Data Binding input -->
+            <EventCard EventDetails="newEvent" />
+            
+            <button type="submit" class="btn btn-success w-100 mt-3">Register Event</button>
+            <a href="/events" class="btn btn-outline-secondary w-100 mt-2">Cancel</a>
+        </EditForm>
     </div>
 </div>
 

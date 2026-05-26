@@ -1,13 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EventEaseApp.Models
 {
     public class EventModel
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "Event Name is required.")]
+        [StringLength(50, ErrorMessage = "Name is too long (max 50 characters).")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "Event Date is required.")]
         public DateTime Date { get; set; }
+        [Required(ErrorMessage = "Location is required.")]
         public string Location { get; set; }
 
         // Mock database for sharing state across pages
