@@ -1,0 +1,37 @@
+@page "/events/{Id:int}"
+@using EventEaseApp.Models
+@using EventEaseApp.Components
+
+<PageTitle>Event Details</PageTitle>
+
+<h2>Event Details</h2>
+
+@if (eventDetails != null)
+{
+    <div class="my-4 col-md-8">
+        <EventCard EventDetails="eventDetails" />
+    </div>
+    
+    <div class="d-flex gap-2">
+        <a href="/events" class="btn btn-secondary">Back to Event List</a>
+        <a href="/events/register/@eventDetails.Id" class="btn btn-primary">Proceed to Registration</a>
+    </div>
+}
+else
+{
+    <p class="text-danger">Event not found.</p>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private EventModel eventDetails;
+
+    protected override void OnInitialized()
+    {
+        // In a real application, you would fetch this from a database or service.
+        // Using mock retrieval for now based on the Route Parameter ID.
+        eventDetails = new EventModel { Id = Id, Name = $"Mock Event #{Id}", Date = DateTime.Today.AddDays(15 * Id), Location = $"Virtual Stage {Id}" };
+    }
+}

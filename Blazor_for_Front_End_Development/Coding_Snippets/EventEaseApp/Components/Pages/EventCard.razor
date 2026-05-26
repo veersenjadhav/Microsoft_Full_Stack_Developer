@@ -1,0 +1,38 @@
+@using EventEaseApp.Models
+
+<div class="card shadow-sm mb-3">
+    <div class="card-body">
+        <!-- Dynamically displayed Event Details -->
+        <h5 class="card-title text-primary">@EventDetails?.Name</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@EventDetails?.Date.ToString("MMMM dd, yyyy")</h6>
+        <p class="card-text"><strong>Location:</strong> @EventDetails?.Location</p>
+
+        <hr />
+        
+        <!-- Two-Way Data Binding for Editing -->
+        <h6 class="text-secondary">Edit Event:</h6>
+        <div class="mb-2">
+            <label class="form-label">Event Name:</label>
+            <input class="form-control" @bind="EventDetails.Name" @bind:event="oninput" />
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Date:</label>
+            <input type="date" class="form-control" @bind="EventDetails.Date" />
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Location:</label>
+            <input class="form-control" @bind="EventDetails.Location" @bind:event="oninput" />
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public EventModel EventDetails { get; set; } = new EventModel 
+    { 
+        Id = 1,
+        Name = "Annual Tech Conference", 
+        Date = DateTime.Today.AddDays(30), 
+        Location = "Convention Center" 
+    };
+}

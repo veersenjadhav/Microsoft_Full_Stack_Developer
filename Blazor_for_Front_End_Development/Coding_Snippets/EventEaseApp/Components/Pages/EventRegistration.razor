@@ -1,0 +1,47 @@
+@page "/events/register/{Id:int}"
+@using EventEaseApp.Models
+@using EventEaseApp.Components
+
+<PageTitle>Event Registration</PageTitle>
+
+<h2 class="mb-4">Complete Your Registration</h2>
+
+@if (eventDetails != null)
+{
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h5 class="text-secondary">You are registering for:</h5>
+            <!-- Reusing the same Event Card component -->
+            <EventCard EventDetails="eventDetails" />
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card p-4 shadow-sm border-0 bg-light">
+                <h5>Attendee Information</h5>
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your full name" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="name@example.com" />
+                </div>
+                <button class="btn btn-success w-100 mb-2">Confirm Registration</button>
+                <a href="/events/@eventDetails.Id" class="btn btn-outline-secondary w-100">Cancel & Return to Details</a>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private EventModel eventDetails;
+
+    protected override void OnInitialized()
+    {
+        // Fetch mock details based on Route Parameter ID
+        eventDetails = new EventModel { Id = Id, Name = $"Mock Event #{Id}", Date = DateTime.Today.AddDays(15 * Id), Location = $"Virtual Stage {Id}" };
+    }
+}
