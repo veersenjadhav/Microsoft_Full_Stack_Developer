@@ -1,0 +1,66 @@
+@page "/attendance"
+@rendermode InteractiveServer
+@using EventEaseApp.Models
+
+<PageTitle>Attendance Tracker</PageTitle>
+
+<div class="container py-4">
+    <h2 class="mb-4">Attendance Tracker</h2>
+
+    @if (EventModel.Events == null || !EventModel.Events.Any())
+    {
+        <div class="alert alert-info shadow-sm">
+            No events found. Start by creating a new event from the list page.
+        </div>
+    }
+    else
+    {
+        @foreach (var evt in EventModel.Events)
+        {
+            <div class="card mb-4 shadow-sm border-0">
+                <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">@evt.Name</h5>
+                    <span class="badge bg-primary">@evt.Date.ToString("MMM dd, yyyy")</span>
+                </div>
+                <div class="card-body p-0">
+                    <div class="px-3 py-2 bg-light border-bottom d-flex justify-content-between">
+                        <small class="text-secondary">Location: <strong>@evt.Location</strong></small>
+                        <small class="text-secondary">Total Registrations: <strong>@evt.UserDetail.Count</strong></small>
+                    </div>
+                    @if (!evt.UserDetail.Any())
+                    {
+                        <div class="p-4 text-center text-muted">
+                            <i class="bi bi-people me-2"></i>No attendees registered for this event yet.
+                        </div>
+                    }
+                    else
+                    {
+                        <table class="table table-hover table-striped mb-0">
+                            <thead class="table-light small text-uppercase">
+                                <tr>
+                                    <th class="ps-3">Name</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var user in evt.UserDetail)
+                                {
+                                    <tr>
+                                        <td class="ps-3">@user.Name</td>
+                                        <td><a href="mailto:@user.Email" class="text-decoration-none">@user.Email</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+        }
+    }
+
+    <div class="mt-4">
+        <a href="/events" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-2"></i>Back to Event List
+        </a>
+    </div>
+</div>
