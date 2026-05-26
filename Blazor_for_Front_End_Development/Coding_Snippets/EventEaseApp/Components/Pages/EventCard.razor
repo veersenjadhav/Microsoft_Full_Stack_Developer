@@ -7,6 +7,8 @@
         <h6 class="card-subtitle mb-2 text-muted">@EventDetails?.Date.ToString("MMMM dd, yyyy")</h6>
         <p class="card-text"><strong>Location:</strong> @EventDetails?.Location</p>
 
+        @if (IsEditable)
+        {
         <hr />
         
         <!-- Two-Way Data Binding for Editing -->
@@ -23,10 +25,14 @@
             <label class="form-label">Location:</label>
             <input class="form-control" @bind="EventDetails.Location" @bind:event="oninput" />
         </div>
+        }
     </div>
 </div>
 
 @code {
+    [Parameter]
+    public bool IsEditable { get; set; } = true;
+
     [Parameter]
     public EventModel EventDetails { get; set; } = new EventModel 
     { 

@@ -16,7 +16,7 @@
         @foreach (var evt in EventModel.Events)
         {
             <div class="col-md-6 mb-4">
-                <EventCard EventDetails="evt" />
+                <EventCard EventDetails="evt" IsEditable="false" />
                 <div class="d-flex gap-2 mt-2">
                     <a href="/events/@evt.Id" class="btn btn-outline-primary w-100">View Details</a>
                 </div>
@@ -28,6 +28,3 @@
         <p>No events found.</p>
     }
 </div>
-
-@code {
-}
