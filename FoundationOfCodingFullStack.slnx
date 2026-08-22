@@ -10,6 +10,10 @@
     <Project Path="Introduction_to_Programming_with CSharp/Code_Snippets/BankingConsoleApp/BankingConsoleApp.csproj" />
     <Project Path="Introduction_to_Programming_with CSharp/Code_Snippets/LibraryManagementSystem/LibraryManagementSystem.csproj" />
   </Folder>
+  <Folder Name="/Back_End_Development_with_Dot_NET/" />
+  <Folder Name="/Back_End_Development_with_Dot_NET/Coding_Snippets/">
+    <Project Path="Back_End_Development_with_Dot_NET/Coding_Snippets/ImplementingLibraryDemo/ImplementingLibraryDemo.csproj" />
+  </Folder>
   <Folder Name="/Blazor_for_Front_End_Development/" />
   <Folder Name="/Blazor_for_Front_End_Development/Coding_Snippets/">
     <Project Path="Blazor_for_Front_End_Development/Coding_Snippets/BlazorServerApp/BlazorServerApp.csproj" />
